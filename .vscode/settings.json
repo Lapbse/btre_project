@@ -1,0 +1,5 @@
+{
+    "python.pythonPath": "venv/bin/python3",
+    "search.useGlobalIgnoreFiles": true,
+    "git.ignoreLimitWarning": true
+}
