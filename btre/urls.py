@@ -8,5 +8,5 @@ urlpatterns = [
     path('', include('pages.urls')), #Referencia a los urls de la app pages
     path('listings/', include('listings.urls')), #Referencia a los urls de la app listings
     path('admin/', admin.site.urls), #POR DEFECTO
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_URL)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
