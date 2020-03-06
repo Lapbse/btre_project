@@ -9,6 +9,7 @@
       <sourceFolder url="file://$MODULE_DIR$/btre/static" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/listings" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/realtors" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/accounts" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/.vscode" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
