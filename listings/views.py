@@ -4,10 +4,8 @@ from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from .choices import price_choices, bedroom_choices, state_choices
 
 
-
 def index(request):
-    listings = Listing.objects.order_by('-list_date').filter(is_published = True) #Datos ordenados cronológicamente
-
+    listings = Listing.objects.order_by('-list_date').filter(is_published=True) #Datos ordenados cronológicamente
     paginator = Paginator(listings, 6)
     page = request.GET.get('page')
     paged_listings = paginator.get_page(page)
@@ -23,11 +21,10 @@ def listing(request, listing_id):
     listing = get_object_or_404(Listing, pk=listing_id)
 
     context = {
-        'listing':listing
+        'listing': listing
     }
 
     return render(request, 'listings/listing.html', context)
-
 
 
 def search(request):
@@ -39,13 +36,11 @@ def search(request):
         if keywords:
             queryset_list = queryset_list.filter(description__icontains=keywords)
 
-
     # City
     if 'city' in request.GET:
         city = request.GET['city']
         if city:
             queryset_list = queryset_list.filter(city__iexact=city)
-
 
     # State
     if 'state' in request.GET:
@@ -53,13 +48,11 @@ def search(request):
         if state:
             queryset_list = queryset_list.filter(state__iexact=state)
 
-
     # Bedrooms
     if 'bedrooms' in request.GET:
         bedrooms = request.GET['bedrooms']
         if bedrooms:
             queryset_list = queryset_list.filter(bedrooms__gte=bedrooms)
-
 
     # Price
     if 'price' in request.GET:
@@ -67,12 +60,12 @@ def search(request):
         if price:
             queryset_list = queryset_list.filter(price__lte=price)
 
-
     context = {
         'price_choices': price_choices,
         'bedroom_choices': bedroom_choices,
         'state_choices': state_choices,
-        'listings': queryset_list
+        'listings': queryset_list,
+        'values': request.GET
     }
 
     return render(request, 'listings/search.html', context)
