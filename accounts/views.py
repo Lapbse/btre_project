@@ -1,11 +1,19 @@
 from django.shortcuts import render, redirect
 
 def register(request):
-    return render(request, 'accounts/register.html')
+    if request.method == 'POST': #Si procesó el formulario...
+        # Register user
+        return
+    else:
+        return render(request, 'accounts/register.html')
 
 
 def login(request):
-    return render(request, 'accounts/login.html')
+    if request.method == 'POST': #Si procesó el formulario...
+        # Login user
+        return
+    else:
+        return render(request, 'accounts/login.html')
 
 
 def dashboard(request):
