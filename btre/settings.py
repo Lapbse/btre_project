@@ -145,5 +145,11 @@ MEDIA_URL = '/media/'
 from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'
-
 }
+
+# Email config
+EMAIL_HOST = 'smtp.pelanda.es'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'info@pelanda.es'
+EMAIL_HOST_PASSWORD = 'Leo.06101973'
+EMAIL_USE_TLS = True
