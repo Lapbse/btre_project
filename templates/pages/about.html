@@ -9,8 +9,8 @@
     <div class="container">
       <div class="row text-center">
         <div class="col-md-12">
-          <h1 class="display-4">About BT Real Estate</h1>
-          <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, pariatur!</p>
+          <h1 class="display-4">About LAPBSE Real Estate</h1>
+          <p class="lead">Property Searching Just Got So Easy </p>
         </div>
       </div>
     </div>
@@ -36,11 +36,12 @@
       <div class="row">
         <div class="col-md-8">
           <h2>We Search For The Perfect Home</h2>
-          <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, pariatur!</p>
+          <p class="lead"> We offer rental and sale services of all types of properties. </p>
           <img src="{% static 'img/about.jpg' %}" alt="">
-          <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis esse officia repudiandae ad saepe ex, amet
-            neque quod accusamus rem quia magnam magni dolorum facilis ullam minima perferendis? Exercitationem at quaerat
-            commodi id libero eveniet harum perferendis laborum molestias quia.</p>
+          <p class="mt-4">We search for properties according to your search criteria.
+            It is important for us to know what you need and what you consider to be your ideal home.
+            You will have an interview with your personal real estate advisor and then our team will
+            find what you are interested in.</p>
         </div>
         <div class="col-md-4">
           {% if mvp_realtors %}
@@ -65,9 +66,9 @@
   <!-- Work -->
   <section id="work" class="bg-dark text-white text-center">
     <h2 class="display-4">We Work For You</h2>
-    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem velit aperiam, unde aliquid at similique!</h4>
+    <h4> We take care of everything for the efficient purchase of your property! </h4>
     <hr>
-    <a href="listings.html" class="btn btn-secondary text-white btn-lg">View Our Featured Listings</a>
+    <a href="{% url 'listings' %}" class="btn btn-secondary text-white btn-lg"> View Our Featured Listings </a>
   </section>
 
   <!-- Team -->
